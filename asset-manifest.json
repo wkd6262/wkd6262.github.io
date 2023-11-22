@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/wkd6262/cat.git/static/css/main.7d0a05f1.css",
+    "main.js": "/wkd6262/cat.git/static/js/main.8f47bb0d.js",
+    "index.html": "/wkd6262/cat.git/index.html",
+    "main.7d0a05f1.css.map": "/wkd6262/cat.git/static/css/main.7d0a05f1.css.map",
+    "main.8f47bb0d.js.map": "/wkd6262/cat.git/static/js/main.8f47bb0d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7d0a05f1.css",
+    "static/js/main.8f47bb0d.js"
+  ]
+}
