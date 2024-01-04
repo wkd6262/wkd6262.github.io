@@ -10,68 +10,36 @@
         setIsScrolled(false);
       }
 
-# <span id="문제해결">문제 해결</span>
+# Header Component
 
-## 1) 스크롤 이벤트 처리
+## 🚀 기능 구현
 
-### 문제
-사용자의 스크롤 위치에 따라 헤더의 스타일을 업데이트하고 싶습니다.
+### Scroll 이벤트 핸들링
+- 섹션 진입 여부를 상태로 관리하는 `useState` 훅을 사용합니다.
+- `useEffect` 훅을 활용하여 컴포넌트가 마운트되면 스크롤 이벤트 리스너를 등록하고, 언마운트되면 이를 해제합니다.
 
-### 해결
-이미 `handleScroll` 함수를 통해 문제를 해결하려고 시도하셨습니다. 이 함수를 개선하기 위해 더 간결한 접근 방식을 제안합니다. 뷰포트 내에 요소가 있는지 확인하는 재사용 가능한 `isElementInView` 도우미 함수를 만들어 사용할 수 있습니다.
+### 스크롤 위치 확인
+- `handleScroll` 함수를 통해 프로젝트, 기술, 끝이 아닌 섹션의 위치를 확인하고, 스크롤 이벤트에 따라 진입 여부를 갱신합니다.
 
-```jsx
-import React, { useState, useEffect } from "react";
-import headerStyle from "../../styles/header.module.css";
+### 헤더 스타일 변경
+- 현재 섹션에 따라 헤더에 다른 스타일을 적용합니다. 이는 조건부 클래스를 사용하여 동적으로 변경됩니다.
 
-const Header = ({ projectRef, stackRef, moreRef }) => {
-  const [activeSection, setActiveSection] = useState(null);
+### 🌈 미끄러운 스크롤 효과
+- 섹션 간 이동 시 미끄러운 스크롤 효과를 부여하여 사용자 경험을 향상시킵니다.
+  - `scroll-behavior` CSS 속성을 활용하여 부드러운 스크롤을 적용합니다.
 
-  const isElementInView = (element) => {
-    const scrollY = window.scrollY || window.pageYOffset;
-    const elementTop = element.offsetTop;
-    const elementBottom = elementTop + element.offsetHeight;
+### 🎨 시각적 피드백
+- 헤더에 현재 섹션을 나타내는 시각적 피드백을 추가합니다.
+  - 현재 섹션에 따라 텍스트나 아이콘 색상을 변경하여 사용자에게 현재 위치를 명확하게 시각적으로 전달합니다.
 
-    return scrollY >= elementTop && scrollY <= elementBottom;
-  };
+### 💡 가독성 향상을 위한 스타일링
+- `flex` 및 `list-style` 속성을 활용하여 헤더의 가독성을 향상시킵니다.
+  - `display: flex`를 사용하여 헤더 요소들을 수평 정렬합니다.
+  - `list-style-type: none`를 적용하여 목록 스타일을 제거합니다.
 
-  const handleScroll = () => {
-    if (isElementInView(projectRef.current)) {
-      setActiveSection("프로젝트");
-    } else if (isElementInView(stackRef.current)) {
-      setActiveSection("기술");
-    } else if (isElementInView(moreRef.current)) {
-      setActiveSection("끝이 아닌");
-    } else {
-      setActiveSection("ㅇㅈ");
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  return (
-    <div
-      className={`${headerStyle.header} ${
-        activeSection === "프로젝트" ? headerStyle.inProject : ""
-      }`}
-    >
-      <h3>
-        {activeSection === "프로젝트"
-          ? "프로젝트,"
-          : activeSection === "기술"
-          ? "기술,"
-          : activeSection === "끝이 아닌"
-          ? "끝이 아닌,"
-          : "ㅇㅈ,"}
-      </h3>
-    </div>
-  );
-};
-
-export default Header;
+## 🛠 사용된 기술
+- React
+- `useState`, `useEffect` 훅 활용
+- 조건부 클래스 적용
+- 부드러운 스크롤 효과 (`scroll-behavior`)
+- CSS `flex` 및 `list-style` 속성 활용
