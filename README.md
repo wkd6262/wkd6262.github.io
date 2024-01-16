@@ -1,4 +1,4 @@
-# 포트폴리오 제작일지
+# 😎포트폴리오 제작일지
 
 ## 📝 목표
 
@@ -9,22 +9,22 @@
 
 ## 🗂 디렉토리 구조
 
-![주석 2024-01-04 123150.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/3144f39e-f821-47a0-a5b2-b520c2dcda89/21e691f7-d4fb-4774-9c30-71e28097cd25/%EC%A3%BC%EC%84%9D_2024-01-04_123150.png)
+![주석 2024-01-04 123150](https://github.com/wkd6262/wkd6262.github.io/assets/142865132/71a89e0d-c63f-4c29-96ce-721450d98bd2)
 
 원 페이지로 깔끔,심플함을 줌.
 
-![주석 2024-01-04 123237.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/3144f39e-f821-47a0-a5b2-b520c2dcda89/0082396d-5dad-4c3f-9af4-b326bb74291b/%EC%A3%BC%EC%84%9D_2024-01-04_123237.png)
+![주석 2024-01-04 123237](https://github.com/wkd6262/wkd6262.github.io/assets/142865132/6a01eb64-39b6-42ae-81b1-fd504d0e0d3a)
 
 module.css를 사용해 css겹침 현상 배제.
 
-![주석 2024-01-04 123252.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/3144f39e-f821-47a0-a5b2-b520c2dcda89/64ea6dc8-6f1d-4cb0-a5fe-aff0b4e2b08e/%EC%A3%BC%EC%84%9D_2024-01-04_123252.png)
+![주석 2024-01-04 123252](https://github.com/wkd6262/wkd6262.github.io/assets/142865132/2c2e757f-6ac2-42c5-bd05-e7684a61dd11)
 
 답답해 보이지 않도록 margin으로 여백을 주었음.
 
 ## 🛠사용 기술
 
-- **REACT    JAVASCRIPT    CSS3**
-- **VSCODE    GITHUB    FIGMA**
+- **REACT ,   JAVASCRIPT ,   CSS3**
+- **VSCODE ,   GITHUB ,   FIGMA**
 
 ## ✅ 컴포넌트 구성
 
@@ -138,7 +138,6 @@ useEffect(() => {
 ```
 
 - 💭Header가 각 구간에 맞춰서 글씨가 변경되게 설정하는 스크롤 이벤트 구현을 하고 싶었지만 Ref에 미숙하여 문제 발생
-- 
 - ❗**블로그,GPT**를 통해 정보를 얻어 각 구간을 설정하는 **App.js**에 **useRef**를 사용해 각 구간을 **ref로 정의**하여 그 **구간에 들어 올 때 글씨가 변경** 되게 {txt} 함수로 설정하여 구현에 성공
 
 ```jsx
