@@ -228,4 +228,4 @@ const handleScroll = () => {
 
 - 2차 제출 후 수정 보완 , 프로젝트 보고서 정리 기록
 
-## 👉  [포트폴리오 바로 가기]([포트폴리오 링크](https://wkd6262.github.io/)https://wkd6262.github.io/){:target="_blank"}
+## 👉  [포트폴리오 바로 가기](https://wkd6262.github.io/)https://wkd6262.github.io/){:target="_blank"}
